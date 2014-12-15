@@ -39,11 +39,23 @@ public class TextAdventureTest {
 	}
 	
 	@Test
+	public void testSetRoomAvailableMoves() {
+		newGame.appendRoom("Hallway");
+		newGame.appendRoom("Dining Room");
+		newGame.appendRoom("Kitchen");
+		newGame.appendRoom("Living Room");
+		
+		newGame.setRoomMove("Hallway", RoomMap.Pathway.NORTH, "Dining Room");
+		newGame.setRoomMove("Hallway", RoomMap.Pathway.SOUTH, "Kitchen");
+		newGame.setRoomMove("Hallway", RoomMap.Pathway.EAST, "Living Room");
+		
+		assertEquals(3, newGame.getAvailableMoves("Hallway"));
+	}
+	@Test
 	public void testGetAvailableMoves() {
 		newGame.appendRoom("Hallway");
 		newGame.appendRoom("Dining Room");
 		newGame.appendRoom("Kitchen");
-		newGame.setStartingRoom("Hallway");		
-		newGame.getAvailableMoves();
+		newGame.setStartingRoom("Hallway");
 	}
 }

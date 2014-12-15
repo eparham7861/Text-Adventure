@@ -1,0 +1,17 @@
+*** Settings ***
+Library			TextAdventureKeywords
+
+
+*** Test Cases ***
+
+Start Test for New Game
+	Start New Game
+	Append Game Room  Hallway
+	Append Game Room  Kitchen
+	Append Game Room  Basement
+	${Hallway}=  Get Room  0
+	Should Be Equal  Hallway  ${Hallway}
+	${Kitchen}=  Get Room  1
+	Should Be Equal  Kitchen  ${Kitchen}
+	${Basement}=  Get Room  2
+	Should Be Equal  Basement  ${Basement}

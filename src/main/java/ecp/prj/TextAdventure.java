@@ -41,4 +41,19 @@ public class TextAdventure {
 	public String getStartingRoom() {
 		return currentRoom;
 	}
+	
+	public void setRoomMove(String currentRoomName, RoomMap.Pathway direction, String pathWayRoom) {
+		if (building.containsKey(currentRoomName) && building.containsKey(pathWayRoom)) {
+			building.get(currentRoomName).addPath(direction, pathWayRoom);
+		}
+	}
+	
+	public int getAvailableMoves(String currentRoomName) {
+		if (building.containsKey(currentRoomName)) {
+			return building.get(currentRoomName).getAvailableMoves();
+		}
+		else {
+			return 0;
+		}
+	}
 }
