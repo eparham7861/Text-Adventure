@@ -36,6 +36,9 @@ public class TextAdventure {
 		if (building.containsKey(currentRoom)) {
 			this.currentRoom = currentRoom;
 		}
+		else {
+			System.out.println("I need an exception");
+		}
 	}
 	
 	public String getStartingRoom() {
@@ -45,6 +48,9 @@ public class TextAdventure {
 	public void setRoomMove(String currentRoomName, RoomMap.Pathway direction, String pathWayRoom) {
 		if (building.containsKey(currentRoomName) && building.containsKey(pathWayRoom)) {
 			building.get(currentRoomName).addPath(direction, pathWayRoom);
+		}
+		else {
+			System.out.println("I need an exception");
 		}
 	}
 	

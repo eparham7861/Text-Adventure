@@ -20,4 +20,10 @@ public class RoomMapTest {
 		currentMap.setPath(RoomMap.Pathway.SOUTH, "Dining Room");
 		assertEquals(2, currentMap.getAvailableMoves());
 	}
+	
+	@Test
+	public void testGetInvalidPath() {
+		RoomMap currentMap = new RoomMap();
+		assertEquals("Room Not Found", currentMap.getPathwayRoom(RoomMap.Pathway.NORTH));
+	}
 }

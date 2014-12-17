@@ -39,6 +39,11 @@ public class TextAdventureTest {
 	}
 	
 	@Test
+	public void testSetInvalidStartingRoom() {
+		newGame.setStartingRoom("Hallway");
+	}
+	
+	@Test
 	public void testSetRoomAvailableMoves() {
 		newGame.appendRoom("Hallway");
 		newGame.appendRoom("Dining Room");
@@ -51,11 +56,20 @@ public class TextAdventureTest {
 		
 		assertEquals(3, newGame.getAvailableMoves("Hallway"));
 	}
+	
 	@Test
-	public void testGetAvailableMoves() {
-		newGame.appendRoom("Hallway");
+	public void testSetInvalidRoomMoves() {
 		newGame.appendRoom("Dining Room");
-		newGame.appendRoom("Kitchen");
-		newGame.setStartingRoom("Hallway");
+		newGame.setRoomMove("Hallway", RoomMap.Pathway.NORTH, "Dining Room");
+	}
+	
+	@Test
+	public void testSetInvalidPath() {
+		newGame.appendRoom("Hallway");
+		newGame.setRoomMove("Hallway", RoomMap.Pathway.NORTH, "Dining Room");
+	}
+	@Test
+	public void testAttemptGetMovesForRoomThatDoesNotExist() {
+		assertEquals(0, newGame.getAvailableMoves("Hallway"));
 	}
 }
