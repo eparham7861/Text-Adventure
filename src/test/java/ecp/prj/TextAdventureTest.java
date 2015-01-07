@@ -49,24 +49,26 @@ public class TextAdventureTest {
 		newGame.appendRoom("Dining Room");
 		newGame.appendRoom("Kitchen");
 		newGame.appendRoom("Living Room");
+		newGame.appendRoom("Closet");
 		
-		newGame.setRoomMove("Hallway", RoomMap.Pathway.NORTH, "Dining Room");
-		newGame.setRoomMove("Hallway", RoomMap.Pathway.SOUTH, "Kitchen");
-		newGame.setRoomMove("Hallway", RoomMap.Pathway.EAST, "Living Room");
+		newGame.setRoomNorthMove("Hallway", "Dining Room");
+		newGame.setRoomSouthMove("Hallway", "Kitchen");
+		newGame.setRoomEastMove("Hallway", "Living Room");
+		newGame.setRoomWestMove("Hallway", "Closet");
 		
-		assertEquals(3, newGame.getAvailableMoves("Hallway"));
+		assertEquals(4, newGame.getAvailableMoves("Hallway"));
 	}
 	
 	@Test
-	public void testSetInvalidRoomMoves() {
+	public void testSetInvalidRoomMoveNorth() {
 		newGame.appendRoom("Dining Room");
-		newGame.setRoomMove("Hallway", RoomMap.Pathway.NORTH, "Dining Room");
+		newGame.setRoomNorthMove("Hallway", "Dining Room");
 	}
 	
 	@Test
-	public void testSetInvalidPath() {
+	public void testSetInvalidPathNorth() {
 		newGame.appendRoom("Hallway");
-		newGame.setRoomMove("Hallway", RoomMap.Pathway.NORTH, "Dining Room");
+		newGame.setRoomNorthMove("Hallway", "Dining Room");
 	}
 	@Test
 	public void testAttemptGetMovesForRoomThatDoesNotExist() {

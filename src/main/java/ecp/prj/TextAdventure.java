@@ -45,18 +45,45 @@ public class TextAdventure {
 		return currentRoom;
 	}
 	
-	public void setRoomMove(String currentRoomName, RoomMap.Pathway direction, String pathWayRoom) {
-		if (building.containsKey(currentRoomName) && building.containsKey(pathWayRoom)) {
-			building.get(currentRoomName).addPath(direction, pathWayRoom);
+	public void setRoomNorthMove(String currentRoom, String pathWayRoom) {
+		if (building.containsKey(currentRoom) && building.containsKey(pathWayRoom)) {
+			building.get(currentRoom).addPath(RoomMap.Pathway.NORTH, pathWayRoom);
 		}
 		else {
 			System.out.println("I need an exception");
 		}
 	}
 	
-	public int getAvailableMoves(String currentRoomName) {
-		if (building.containsKey(currentRoomName)) {
-			return building.get(currentRoomName).getAvailableMoves();
+	public void setRoomSouthMove(String currentRoom, String pathWayRoom) {
+		if (building.containsKey(currentRoom) && building.containsKey(pathWayRoom)) {
+			building.get(currentRoom).addPath(RoomMap.Pathway.SOUTH, pathWayRoom);
+		}
+		else {
+			System.out.println("I need an exception");
+		}
+	}
+	
+	public void setRoomEastMove(String currentRoom, String pathWayRoom) {
+		if (building.containsKey(currentRoom) && building.containsKey(pathWayRoom)) {
+			building.get(currentRoom).addPath(RoomMap.Pathway.EAST, pathWayRoom);
+		}
+		else {
+			System.out.println("I need an exception");
+		}
+	}
+	
+	public void setRoomWestMove(String currentRoom, String pathWayRoom) {
+		if (building.containsKey(currentRoom) && building.containsKey(pathWayRoom)) {
+			building.get(currentRoom).addPath(RoomMap.Pathway.WEST, pathWayRoom);
+		}
+		else {
+			System.out.println("I need an exception");
+		}
+	}
+	
+	public int getAvailableMoves(String currentRoom) {
+		if (building.containsKey(currentRoom)) {
+			return building.get(currentRoom).getAvailableMoves();
 		}
 		else {
 			return 0;
