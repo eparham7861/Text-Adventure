@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 2.8.5 (Jython 2.5.3 on java1.7.0_71)" generated="20141217 14:51:23.583">
+<robot generator="Robot 2.8.5 (Jython 2.5.3 on java1.7.0_71)" generated="20150107 10:17:27.751">
 <suite source="C:\Users\Eric\Documents\Personal Projects\Text-Adventure\acceptance\TextAdventureAcceptance.txt" id="s1" name="TextAdventureAcceptance">
 <test id="s1-t1" name="Start Test for New Game">
 <kw type="kw" name="TextAdventureKeywords.Start New Game">
 <doc></doc>
 <arguments>
 </arguments>
-<status status="PASS" endtime="20141217 14:51:24.343" starttime="20141217 14:51:24.324"></status>
+<status status="PASS" endtime="20150107 10:17:28.423" starttime="20150107 10:17:28.408"></status>
 </kw>
 <kw type="kw" name="TextAdventureKeywords.Append Game Room">
 <doc></doc>
 <arguments>
 <arg>Hallway</arg>
 </arguments>
-<status status="PASS" endtime="20141217 14:51:24.359" starttime="20141217 14:51:24.348"></status>
+<status status="PASS" endtime="20150107 10:17:28.423" starttime="20150107 10:17:28.423"></status>
 </kw>
 <kw type="kw" name="TextAdventureKeywords.Append Game Room">
 <doc></doc>
 <arguments>
 <arg>Kitchen</arg>
 </arguments>
-<status status="PASS" endtime="20141217 14:51:24.369" starttime="20141217 14:51:24.363"></status>
+<status status="PASS" endtime="20150107 10:17:28.439" starttime="20150107 10:17:28.423"></status>
 </kw>
 <kw type="kw" name="TextAdventureKeywords.Append Game Room">
 <doc></doc>
 <arguments>
 <arg>Basement</arg>
 </arguments>
-<status status="PASS" endtime="20141217 14:51:24.378" starttime="20141217 14:51:24.373"></status>
+<status status="PASS" endtime="20150107 10:17:28.439" starttime="20150107 10:17:28.439"></status>
 </kw>
 <kw type="kw" name="${Hallway} = TextAdventureKeywords.Get Room">
 <doc></doc>
 <arguments>
 <arg>0</arg>
 </arguments>
-<msg timestamp="20141217 14:51:24.389" level="INFO">${Hallway} = Hallway</msg>
-<status status="PASS" endtime="20141217 14:51:24.387" starttime="20141217 14:51:24.382"></status>
+<msg timestamp="20150107 10:17:28.454" level="INFO">${Hallway} = Hallway</msg>
+<status status="PASS" endtime="20150107 10:17:28.454" starttime="20150107 10:17:28.454"></status>
 </kw>
 <kw type="kw" name="BuiltIn.Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -43,18 +43,18 @@
 <arg>Hallway</arg>
 <arg>${Hallway}</arg>
 </arguments>
-<msg timestamp="20141217 14:51:24.401" level="INFO">Argument types are:
+<msg timestamp="20150107 10:17:28.470" level="INFO">Argument types are:
 &lt;type 'unicode'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" endtime="20141217 14:51:24.403" starttime="20141217 14:51:24.394"></status>
+<status status="PASS" endtime="20150107 10:17:28.470" starttime="20150107 10:17:28.454"></status>
 </kw>
 <kw type="kw" name="${Kitchen} = TextAdventureKeywords.Get Room">
 <doc></doc>
 <arguments>
 <arg>1</arg>
 </arguments>
-<msg timestamp="20141217 14:51:24.410" level="INFO">${Kitchen} = Kitchen</msg>
-<status status="PASS" endtime="20141217 14:51:24.409" starttime="20141217 14:51:24.406"></status>
+<msg timestamp="20150107 10:17:28.486" level="INFO">${Kitchen} = Kitchen</msg>
+<status status="PASS" endtime="20150107 10:17:28.486" starttime="20150107 10:17:28.470"></status>
 </kw>
 <kw type="kw" name="BuiltIn.Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -62,18 +62,18 @@
 <arg>Kitchen</arg>
 <arg>${Kitchen}</arg>
 </arguments>
-<msg timestamp="20141217 14:51:24.420" level="INFO">Argument types are:
+<msg timestamp="20150107 10:17:28.486" level="INFO">Argument types are:
 &lt;type 'unicode'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" endtime="20141217 14:51:24.422" starttime="20141217 14:51:24.413"></status>
+<status status="PASS" endtime="20150107 10:17:28.486" starttime="20150107 10:17:28.486"></status>
 </kw>
 <kw type="kw" name="${Basement} = TextAdventureKeywords.Get Room">
 <doc></doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20141217 14:51:24.433" level="INFO">${Basement} = Basement</msg>
-<status status="PASS" endtime="20141217 14:51:24.431" starttime="20141217 14:51:24.426"></status>
+<msg timestamp="20150107 10:17:28.501" level="INFO">${Basement} = Basement</msg>
+<status status="PASS" endtime="20150107 10:17:28.501" starttime="20150107 10:17:28.501"></status>
 </kw>
 <kw type="kw" name="BuiltIn.Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -81,20 +81,20 @@
 <arg>Basement</arg>
 <arg>${Basement}</arg>
 </arguments>
-<msg timestamp="20141217 14:51:24.441" level="INFO">Argument types are:
+<msg timestamp="20150107 10:17:28.501" level="INFO">Argument types are:
 &lt;type 'unicode'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" endtime="20141217 14:51:24.443" starttime="20141217 14:51:24.437"></status>
+<status status="PASS" endtime="20150107 10:17:28.501" starttime="20150107 10:17:28.501"></status>
 </kw>
 <doc></doc>
 <tags>
 </tags>
-<status status="PASS" critical="yes" endtime="20141217 14:51:24.445" starttime="20141217 14:51:24.309"></status>
+<status status="PASS" critical="yes" endtime="20150107 10:17:28.517" starttime="20150107 10:17:28.392"></status>
 </test>
 <doc></doc>
 <metadata>
 </metadata>
-<status status="PASS" endtime="20141217 14:51:24.455" starttime="20141217 14:51:23.596"></status>
+<status status="PASS" endtime="20150107 10:17:28.517" starttime="20150107 10:17:27.767"></status>
 </suite>
 <statistics>
 <total>
